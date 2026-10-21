@@ -1,31 +1,308 @@
-<!doctype html> 
-<html lang='es'> 
-<head> 
-  <meta charset='UTF-8'> 
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
-  <title>Mi producto</title> 
-  <link rel='stylesheet' href='./styles.css'> 
-</head> 
-<body> 
-  <header><strong>Mi hobbie es el dibujo (AHCM)</strong></header> 
-  <main> 
-    <section class='hero'> 
-      <p class='tag'>Desarrollo de software</p> 
-      <h1>Una idea clara en una página</h1> 
-      <p>El dibujo es, en su esencia más pura, el idioma del alma plasmado
-        sobre el papel. Es el arte de trazar puentes invisibles entre lo 
-        que tus ojos ven (o tu mente imagina) y el mundo exterior, utilizando
-        apenas una línea, una sombra y un pedazo de lienzo.
-      </p> 
-      <a class='btn' href='#beneficios'>Conocer más</a> 
-    </section> 
-    <section id='beneficios'> 
-      <h2>Beneficios</h2> 
-      <div class='cards'> 
-        <article>Simple</article><article>Útil</article><article>Accesible</article> 
-      </div> 
-    </section> 
-  </main> 
-  <footer>Actividad de Intro a IDS</footer> 
-</body> 
-</html> 
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AHCM Studio | Desarrollo de software</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #202938;
+    line-height: 1.6;
+}
+
+header {
+    background: #172554;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header strong {
+    font-size: 23px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+main {
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    padding: 85px 20px;
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+}
+
+.tag {
+    color: #bfdbfe;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    max-width: 750px;
+    margin: 15px auto;
+    line-height: 1.2;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #172554;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #7dd3fc;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+article img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #1d4ed8;
+    margin-top: 0;
+}
+
+.card-content a {
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    background: #172554;
+    color: white;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+/* Adaptación para celulares y tabletas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <strong>AHCM Studio</strong>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#beneficios">Servicios</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="inicio">
+        <p class="tag">Desarrollo de software</p>
+
+        <h1>Ideas digitales que se convierten en experiencias</h1>
+
+        <p>
+            En AHCM Studio, mi objetivo es desarrollar aplicaciones
+            y videojuegos que combinen creatividad, tecnología
+            y soluciones útiles para las personas.
+        </p>
+
+        <a class="btn" href="#beneficios">Conocer mis servicios</a>
+    </section>
+
+    <section id="beneficios">
+        <h2>¿Qué puedo desarrollar?</h2>
+
+        <p class="intro">
+            Cada proyecto es una oportunidad para crear algo nuevo,
+            resolver problemas y mejorar la experiencia de los usuarios.
+        </p>
+
+        <div class="cards">
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80"
+                    alt="Teléfono inteligente con aplicaciones móviles"
+                >
+
+                <div class="card-content">
+                    <h3>Aplicaciones móviles</h3>
+
+                    <p>
+                        Aplicaciones prácticas e intuitivas que ayudan
+                        a las personas a realizar tareas y resolver
+                        necesidades de su vida diaria.
+                    </p>
+
+                    <a href="https://developer.android.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                        Explorar desarrollo de apps
+                    </a>
+                </div>
+            </article>
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80"
+                    alt="Equipo y espacio relacionado con videojuegos"
+                >
+
+                <div class="card-content">
+                    <h3>Videojuegos</h3>
+
+                    <p>
+                        Creación de juegos interactivos que combinan
+                        programación, diseño y creatividad para ofrecer
+                        experiencias entretenidas.
+                    </p>
+
+                    <a href="https://learn.unity.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                        Aprender a crear videojuegos
+                    </a>
+                </div>
+            </article>
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=900&q=80"
+                    alt="Código de programación en una computadora"
+                >
+
+                <div class="card-content">
+                    <h3>Soluciones digitales</h3>
+
+                    <p>
+                        Desarrollo de herramientas y programas
+                        personalizados para automatizar tareas y
+                        resolver problemas mediante la tecnología.
+                    </p>
+
+                    <a href="https://github.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                        Conocer proyectos de software
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>AHCM Studio | Actividad de Introducción a IDS</p>
+    <p>Creatividad, programación e innovación.</p>
+</footer>
+
+</body>
+</html>
